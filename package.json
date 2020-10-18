@@ -1,0 +1,19 @@
+{
+    "name": "@dipser/outerclick.vuejs",
+    "version": "1.0.0",
+    "description": "Vuejs mixin for outerclick.",
+    "author": "dipser",
+    "license": "Apache-2.0",
+    "main": "./index.js",
+    "module": "./index.js",
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/Bitfertig/outerclick.vuejs.git"
+    },
+    "keywords": [
+        "javascript"
+    ],
+    "devDependencies": {
+        
+    }
+}
