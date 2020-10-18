@@ -6,6 +6,15 @@
     <title>outerclick.vuejs</title>
     <meta name="keywords" content="outerclick.vuejs, Intl, javascript, ecma, month, weekday, language">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/prism.css" integrity="sha256-h/qtq9bUnXbOOwP4EcbLtYM9Mk3iQQcHZAZ+Jz5y0WQ=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script>
+    <script>
+    function encode_html(rawStr) {
+        return rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+            return '&#' + i.charCodeAt(0) + ';';
+        });
+    }
+    </script>
 </head>
 <body>
 
@@ -22,11 +31,13 @@
 
 
         <h2 class="mt-5">Usage</h2>
-        <div style="white-space:pre-wrap;">&lt;template&gt;
-    &lt;button @click="register_outerclick(['ref', 'ref2'], ()=>close())" ref="ref"&gt;&lt;/button&gt;
-    &lt;div ref="ref2"&gt;Inner&lt;/div&gt;
-&lt;/template&gt;
-&lt;script&gt;
+        <pre><code id="example" class="language-html"></code></pre>
+        <script>
+        var example = `<template>
+    <button @click="register_outerclick(['ref', 'ref2'], ()=>close())" ref="ref"></button>
+    <div ref="ref2">Inner</div>
+</template>
+<scr`+`ipt>
 import outerclick from '@dipser/outerclick.vuejs';
 export default {
     mixins: [
@@ -38,7 +49,11 @@ export default {
         }
     }
 }
-&lt;/script&gt;</div>
+</scr`+`ipt>`;
+        let example_el = document.querySelector('#example');
+        example_el.innerHTML = encode_html(example);
+        Prism.highlightElement(example_el);
+        </script><br>
 
 
         <h2 class="mt-5">Demo</h2>
