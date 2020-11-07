@@ -1,7 +1,7 @@
 {
     "name": "@dipser/outerclick.vuejs",
-    "version": "1.0.0",
-    "description": "Vuejs mixin for outerclick.",
+    "version": "1.0.1",
+    "description": "Vuejs mixin for outerclick with refs.",
     "author": "dipser",
     "license": "Apache-2.0",
     "main": "./index.js",
@@ -11,7 +11,7 @@
         "url" : "https://github.com/Bitfertig/outerclick.vuejs.git"
     },
     "keywords": [
-        "javascript"
+        "javascript", "vue", "vuejs", "outerclick", "outer", "outside", "click", "ref"
     ],
     "devDependencies": {
         
