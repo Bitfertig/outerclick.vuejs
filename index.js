@@ -25,9 +25,10 @@ var outerclickMixin = {
                 let inside_click = false;
                 for (let item of this.outerclick_references) {
                     let ref = this.$refs[item];
-                    let refs = typeof ref == 'array' ? ref : [ref];
-                    //console.log(this.$refs[item]);
+                    let typeof_ref = typeof ref;
+                    let refs = typeof_ref == 'array' || typeof_ref == 'object' ? ref : [ref];
                     for (let i in refs) {
+                        //console.log(typeof refs[i]);
                         if ( refs[i].contains(e.target) ) { // => not outside click
                             inside_click = true;
                         }
