@@ -1,6 +1,6 @@
 {
     "name": "@dipser/outerclick.vuejs",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Vuejs mixin for outerclick with refs.",
     "author": "dipser",
     "license": "Apache-2.0",
