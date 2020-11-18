@@ -1,3 +1,5 @@
+![](https://img.badgesize.io/Bitfertig/outerclick.vuejs/main/index.js?label=JS_file_only)
+
 # outerclick.vuejs
 
 Outerclick vuejs-mixin by references.
